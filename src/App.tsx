@@ -13,6 +13,7 @@ import {
 } from "./components";
 import { useEffect } from "react";
 import { config } from "./constants/config";
+import { IntroProfile } from "./components/IntroProfile";
 
 const App = () => {
   useEffect(() => {
@@ -28,6 +29,7 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
+        <IntroProfile />
         <About />
         <Experience />
         <Tech />
