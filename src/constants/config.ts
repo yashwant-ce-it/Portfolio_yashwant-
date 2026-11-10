@@ -67,10 +67,10 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `I'm a skilled software developer with experience in TypeScript and
-      JavaScript, and expertise in frameworks like React, Node.js, and
+      content: `I'm a skilled software developer and AI engineer with experience in TypeScript,
+      Python, and machine learning architectures, alongside frameworks like React, Node.js, and
       Three.js. I'm a quick learner and collaborate closely with clients to
-      create efficient, scalable, and user-friendly solutions that solve
+      create intelligent, efficient, scalable, and user-friendly solutions that solve
       real-world problems. Let's work together to bring your ideas to life!`,
     },
     experience: {

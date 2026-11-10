@@ -51,6 +51,10 @@ export const navLinks: TNavLink[] = [
 
 const services: TService[] = [
   {
+    title: "AI Engineer",
+    icon: creator,
+  },
+  {
     title: "Web Developer",
     icon: web,
   },
@@ -61,10 +65,6 @@ const services: TService[] = [
   {
     title: "Backend Developer",
     icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
   },
 ];
 

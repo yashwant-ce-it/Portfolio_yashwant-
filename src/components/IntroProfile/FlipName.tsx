@@ -183,7 +183,7 @@ export const FlipName: React.FC<FlipNameProps> = ({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.6 }}
             transition={{ duration: 0.15 }}
-            className="absolute pointer-events-none z-30 -top-3 left-0 px-2 py-0.5 rounded-full bg-[#915EFF] text-black font-mono text-[10px] font-bold tracking-widest uppercase shadow-lg shadow-[#915EFF]/40"
+            className="absolute pointer-events-none z-30 -top-3 left-0 px-2 py-0.5 rounded-full bg-[#1c1d29] border border-white/20 text-white font-mono text-[10px] font-bold tracking-widest uppercase shadow-lg shadow-black/80"
             style={{
               transform: `translate(${pillPos.x + 12}px, ${pillPos.y - 18}px)`,
             }}
@@ -208,15 +208,27 @@ export const FlipName: React.FC<FlipNameProps> = ({
                 style={{ width: widthStyle }}
               >
                 <span
-                  className="transition-opacity duration-200 text-[#915EFF]"
-                  style={{ opacity: isFlipped ? 0 : 1 }}
+                  className="transition-opacity duration-200"
+                  style={{
+                    opacity: isFlipped ? 0 : 1,
+                    background: "linear-gradient(180deg, #35364a 0%, #11121c 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    WebkitTextStroke: "1px rgba(255, 255, 255, 0.22)",
+                    filter: "drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9))",
+                  }}
                 >
                   {slot.frontChar}
                 </span>
                 <span
-                  className="absolute inset-0 flex items-center justify-center transition-opacity duration-200 bg-gradient-to-r from-[#22D3EE] to-[#915EFF] bg-clip-text text-transparent"
+                  className="absolute inset-0 flex items-center justify-center transition-opacity duration-200"
                   style={{
                     opacity: isFlipped ? 1 : 0,
+                    background: "linear-gradient(180deg, #2b3944 0%, #0d151c 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    WebkitTextStroke: "1px rgba(0, 240, 255, 0.25)",
+                    filter: "drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9))",
                   }}
                 >
                   {slot.backChar}
@@ -268,33 +280,43 @@ export const FlipName: React.FC<FlipNameProps> = ({
                     transformStyle: "preserve-3d",
                   }}
                 >
-                  {/* Front face (YASHWANT in exact hero purple) */}
+                  {/* Front face (YASHWANT in Dark Obsidian / Stealth Graphite) */}
                   <div
-                    className="relative flex items-center justify-center text-[#915EFF]"
+                    className="relative flex items-center justify-center"
                     style={{
                       backfaceVisibility: "hidden",
                       WebkitBackfaceVisibility: "hidden",
                       transform: "rotateX(0deg)",
+                      background: "linear-gradient(180deg, #383a4f 0%, #161722 55%, #0b0c13 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      WebkitTextStroke: "1.2px rgba(255, 255, 255, 0.22)",
+                      filter: "drop-shadow(0 4px 16px rgba(0, 0, 0, 0.95))",
                     }}
                   >
                     {slot.frontChar}
                   </div>
 
-                  {/* Back face (SHARMA in cyan-to-purple gradient) */}
+                  {/* Back face (SHARMA in Dark Steel / Stealth Slate) */}
                   <div
                     className="absolute inset-0 flex items-center justify-center"
                     style={{
                       backfaceVisibility: "hidden",
                       WebkitBackfaceVisibility: "hidden",
                       transform: "rotateX(180deg)",
+                      background: "linear-gradient(180deg, #2f3e4b 0%, #131b23 55%, #0a0f14 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      WebkitTextStroke: "1.2px rgba(0, 240, 255, 0.28)",
+                      filter: "drop-shadow(0 4px 16px rgba(0, 0, 0, 0.95))",
                     }}
                   >
                     <span
-                      className={`bg-gradient-to-r from-[#22D3EE] via-[#7487F6] to-[#915EFF] bg-clip-text text-transparent ${
+                      className={
                         slot.backChar === "·"
-                          ? "text-[#22D3EE]/60 text-[0.6em] animate-pulse"
+                          ? "text-[#00f0ff]/40 text-[0.6em] animate-pulse"
                           : ""
-                      }`}
+                      }
                     >
                       {slot.backChar}
                     </span>
