@@ -15,16 +15,15 @@ interface StarfieldProps {
   isActive?: boolean;
 }
 
-// Color palette inspired by the IEEE Citadel Cyber Theme
+// Subtle, calm starlight palette for stealth dark theme
 const CYBER_STAR_COLORS = [
   "#FFFFFF",
   "#FFFFFF",
-  "#00f0ff", // Neon Cyan
-  "#00f0ff",
-  "#0088ff", // Electric Blue
-  "#ff0055", // Cyber Magenta
-  "#39ff14", // Cyber Green
-  "#915EFF", // Hero Purple
+  "#F8FAFC",
+  "#E2E8F0",
+  "#CBD5E1",
+  "#94A3B8",
+  "#DDD6FE",
 ];
 
 export const Starfield: React.FC<StarfieldProps> = ({ isActive = true }) => {
